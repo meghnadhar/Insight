@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+      
+      <div class="col-sm-4 col-sm-offset-3">
+          <h4>Search Results:</h4>
+   <div *ngIf="result">
+    <ul *ngFor = " let results of result.data;let i = index" class="list">
+            <ng-container *ngIf="i==0">
+                <li>Name:{{results['0']['data']['name']}}</li>
+                <li>Sex:{{results['0']['data']['sex']}}</li>
+                <li>Age:{{results['0']['data']['age']}}</li>
+                <li>Address:{{results['0']['data']['address']}}</li>
+            </ng-container>
+            <div *ngIf="results['2']['data']['title']">
+            <li>Movie Likes:{{results['2']['data']['title']}}</li>
+            </div>
+            <div *ngIf="results['2']['data']['name']">
+            <li>Friends:{{results['2']['data']['name']}}</li>
+            </div>
+            
+        </ul>
+    
+   </div>
+   </div>
+   </div>
+   </div>

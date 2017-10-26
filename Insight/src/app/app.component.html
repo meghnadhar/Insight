@@ -1,0 +1,16 @@
+<app-navbar>
+
+</app-navbar>
+<button (click)="toggleMenu()" class="hamburger">
+        <span>toggle menu</span>
+      </button>
+
+<app-side-navbar [@slideInOut]="menuState"></app-side-navbar>
+<!-- <app-form></app-form> -->
+<router-outlet></router-outlet>
+
+
+   
+
+       
+
